@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "../component/Button";
 
 function Count() {
@@ -15,6 +15,12 @@ function Count() {
       return newCount;
     });
   };
+
+useEffect(() => {
+if (count % 2 ===0) {
+  alert("We don reach even num o")
+}
+},[count])
 
   return (
     <div>
